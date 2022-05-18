@@ -231,6 +231,11 @@ void ts_tree_cursor_new_wasm(const TSTree *tree) {
   marshal_cursor(&cursor);
 }
 
+TSTreeCursor ts_tree_cursor_copy_wasm(const TSTree *tree) {
+  TSTreeCursor cursor = unmarshal_cursor(TRANSFER_BUFFER, tree);
+  return ts_tree_cursor_copy(&cursor);
+}
+
 void ts_tree_cursor_delete_wasm(const TSTree *tree) {
   TSTreeCursor cursor = unmarshal_cursor(TRANSFER_BUFFER, tree);
   ts_tree_cursor_delete(&cursor);

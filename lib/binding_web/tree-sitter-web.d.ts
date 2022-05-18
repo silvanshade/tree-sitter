@@ -114,6 +114,7 @@ declare module 'web-tree-sitter' {
       endIndex: number;
 
       reset(node: SyntaxNode): void;
+      copy(): TreeCursor;
       delete(): void;
       currentNode(): SyntaxNode;
       currentFieldId(): number;
