@@ -1,10 +1,6 @@
 declare module 'web-tree-sitter' {
   class Parser {
-    /**
-     * 
-     * @param moduleOptions Optional emscripten module-object, see https://emscripten.org/docs/api_reference/module.html
-     */
-    static init(moduleOptions?: object): Promise<void>;
+    static init(): Promise<void>;
     delete(): void;
     parse(input: string | Parser.Input, previousTree?: Parser.Tree, options?: Parser.Options): Parser.Tree;
     reset(): void;
